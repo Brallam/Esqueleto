@@ -1,0 +1,53 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+<div>
+    <div class="container d-flex justify-content-center">
+        <div class="row " style="height: 600px; width: 1000px; border: 1px solid red; margin: 30px 0;">
+            <div class="col-6"></div>
+            <div class="col-6 contenedor-formulario">
+                <div class="d-flex justify-content-end">
+                    <button>Sign In</button>
+                    <button>Sign Up</button>
+                </div>
+                <div class="registro">
+                    <form action="" method="POST">
+                        <label class="label-formulario" for="nameregister">Name</label>
+                        <input class="input-formulario" type="text" name="nameregister" id="nameregister" placeholder="Enter your name">
+
+                        <label class="label-formulario" for="nameregister">Last name</label>
+                        <input class="input-formulario" type="text" name="lnameregister" id="lnameregister" placeholder="Enter your last name">
+
+                        <label class="label-formulario" for="passregister">Password</label>
+                        <input class="input-formulario" type="password" name="passregister" id="passregister" placeholder="Enter your full name">
+
+                        <label class="label-formulario" for="emailregister">E-mail</label>
+                        <input class="input-formulario" type="email" name="emailregister" id="emailregister" placeholder="Enter your email">
+
+                        <div style="position: relative;">
+                        <input class="checkbox-formulario" type="checkbox" name="checkboxregister" id="checkboxregister"><span class="texto-checkbox">By signin up you agree Terms & Conditions</span>
+                        </div>
+
+                        <button class="boton-formulario" type="submit">Sign Up</button>
+                    </form>
+                </div>
+
+                <div class="login">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<%- include('./partials/footer') %> 

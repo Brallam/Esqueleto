@@ -1,8 +1,182 @@
+
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
 }
 
 a {
-  color: #00B7FF;
+  color: silver;
+  text-decoration: none;
+}
+a:hover{
+  color: aquamarine;
+}
+
+/* FROM THE BLOG */
+.card{
+  height: 365px;
+  width: 250px;
+  border: none;
+}
+.card-body{
+  text-align: start;
+  height: 80px;
+  padding: 16px 0 0 0;
+}
+.card-body button{
+  width: 100%;
+}
+
+
+
+
+/* SLICKY CSS */
+@media (min-width: 768px) {
+
+  /* show 3 items */
+  .carouselPrograms .carousel-inner .active,
+  .carouselPrograms .carousel-inner .active + .carousel-item,
+  .carouselPrograms .carousel-inner .active + .carousel-item + .carousel-item {
+      display: block;
+  }
+
+  .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
+  .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item,
+  .carouselPrograms .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
+      transition: none;
+  }
+
+  .carouselPrograms .carousel-inner .carousel-item-next,
+  .carouselPrograms .carousel-inner .carousel-item-prev {
+      position: relative;
+      transform: translate3d(0, 0, 0);
+  }
+
+  .carouselPrograms .carousel-inner .active.carousel-item + .carousel-item + .carousel-item + .carousel-item {
+      position: absolute;
+      top: 0;
+      right: -33.333%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+
+  /* left or forward direction */
+  .carouselPrograms .active.carousel-item-left + .carousel-item-next.carousel-item-left,
+  .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item,
+  .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item,
+  .carouselPrograms .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(-100%, 0, 0);
+      visibility: visible;
+  }
+
+  /* farthest right hidden item must be abso position for animations */
+  .carouselPrograms .carousel-inner .carousel-item-prev.carousel-item-right {
+      position: absolute;
+      top: 0;
+      left: 0%;
+      z-index: -1;
+      display: block;
+      visibility: visible;
+  }
+
+  /* right or prev direction */
+  .carouselPrograms .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
+  .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item,
+  .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item,
+  .carouselPrograms .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
+      position: relative;
+      transform: translate3d(100%, 0, 0);
+      visibility: visible;
+      display: block;
+      visibility: visible;
+  }
+}
+
+
+/*MARCAS*/
+.lineSeparated{
+  border-top: 1px solid rgb(223, 223, 223);
+  margin-top:90px;
+  background-color:  #f0f0f0;
+}
+.slick-slide{
+  margin: 0 20px;
+}
+.slick-slide .imgslidermarca{
+  width: 100%;
+  filter: grayscale(100%);
+}
+.slick-slide .imgslidermarca:hover{
+  filter: none;
+}
+.slick-slider{
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+}
+.slick-list{
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+.slick-track{
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block
+}
+.slick-slide{
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+.slick-slide .imgslidermarca{
+  display: block;
+  width: 120px;
+}
+.slick-initialized .slick-slide{
+  display: block;
+}
+
+
+
+
+/*---------------------LOGIN Y REGISTRO--------------------*/
+
+.contenedor-formulario{
+  border: 1px solid aquamarine;
+}
+
+.registro{
+  padding: 50px 70px;
+}
+
+.input-formulario{
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid silver;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.checkbox-formulario{
+  margin-right: 10px;
+}
+.texto-checkbox{
+  font-size: 11px;
+  position: absolute;
+  top: 1px;
+}
+
+.boton-formulario{
+  display: block;
+  margin-top: 20px;
 }

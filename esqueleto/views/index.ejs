@@ -1,11 +1,423 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
+  <%- include('./partials/head') %> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg==" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js" integrity="sha512-WNLxfP/8cVYL9sj8Jnp6et0BkubLP31jhTG9vhL/F5uEZmg5wEzKoXp1kJslzPQWwPT1eyMiSxlKCgzHLOTOTQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
-</html>
+  <%- include('./partials/header') %>
+
+    <!-- slider -->
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="/images/slider1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="/images/slider2.jpg" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+
+    <!-- WOOCOMERCE RESPONSIVE THEME -->
+    <div class="container">
+      <div style="background-color: rgb(240, 240, 240); height: 100px; margin-top: 50px;">
+        <div class="row d-flex align-items-center" style="padding: 0px 30px;">
+          <div class="col-3" style="margin-top: 15px;">
+            <h3 style="border-right: 2px solid rgb(98, 146, 98);">Woocommerce <br>
+            Responsive Theme</h3>
+          </div>
+          <div class="col-7" style="margin-top: 15px;"><p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged</p></div>
+          <div class="col-2"><button style="height: 45px; width: 170px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 15px;">Purchase now</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- OFERTAS -->
+    <div class="container">
+      <div style="margin-top: 50px;">
+        <div class="row">
+          <div class="col-3">
+            <div style="height: 400px; padding: 40px 30px; background-color: rgb(90, 90, 90);">
+              <div style="border-top: 3px solid rgb(98,146,89); width: 50px; margin-bottom: 30px;"></div>
+              <h6 style="color: rgb(98,146,89);">THE WEEK ONLY</h6>
+              <h4 style="color: white;">AWESOME <br>OFFERS</42>
+              <h4 style="color: rgb(98,146,89); font-weight: 600;">20 % OFF</h4>
+              <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos expedita eaque quis maxime a quidem ad enim inventore nam non ipsa vitae debitis doloremque nostrum voluptas sit illo dolore, distinctio ipsam dolores odio itaque? Totam illo laudantium molestiae velit.</p>
+              <div style="border-bottom: 3px solid rgb(98,146,89); width: 50px; margin-top: 30px;"></div>
+            </div>
+          </div>
+          <div class="col-9">
+            <h4>FROM THE BLOG</h4>
+            <div class="center" style="text-align:center; color: black; height: 300px;">
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BANNERS -->
+    <div class="container">
+      <div class="" style="margin-top: 50px;">
+        <div class="row">
+          <div class="col-6">
+            <img src="/images/banner1.jpg" alt="">
+          </div>
+          <div class="col-6 text-end">
+            <img src="/images/banner2.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LATEST PRODUCTS -->
+    <div class="container">
+      <div style="margin-top: 50px;">
+        <div class="row">
+          <div class="col-9">
+            <h4>FROM THE BLOG</h4>
+            <div class="center" style="text-align:center; color: black; height: 300px;">
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col-6">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">$PRECIO.</p>
+                      </div>
+                      <div class="col-6">
+                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div>
+          <div class="col-3">
+            <div style="height: 400px; padding: 40px 30px; background-color: rgb(90, 90, 90);">
+              <div style="border-top: 3px solid rgb(98,146,89); width: 50px; margin-bottom: 30px;"></div>
+              <h6 style="color: rgb(98,146,89);">MEN'S SUIT</h6>
+              <h4 style="color: white;">SALE <br>25% OFF</42>
+              <h4 style="color: rgb(98,146,89); font-weight: 600;">SUIT $199 & UP</h4>
+              <p style="color: white;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quos expedita eaque quis maxime a quidem ad enim inventore nam non ipsa vitae debitis doloremque nostrum voluptas sit illo dolore, distinctio ipsam dolores odio itaque? Totam illo laudantium molestiae velit.</p>
+              <div style="border-bottom: 3px solid rgb(98,146,89); width: 50px; margin-top: 30px;"></div>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+ 
+    <!-- FROM THE BLOG -->
+    <div class="container">
+      <div style="margin-top: 50px;">
+        <h4 style="margin-bottom: 30px;">FROM THE BLOG</h4>
+        <div class="row">
+          <div class="col-12">
+            <div class="center" style="text-align:center; color: black; height: 330px;">
+              <div>
+                <div class="card" style="width: 360px; height: 400px;">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <h5 class="text-start">POST FORMAT: STANDARD</h5>
+                    <p class="text-start">Admin <span>Leave a comment</span></p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="width: 360px; height: 400px;">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <h5 class="text-start">POST FORMAT: STANDARD</h5>
+                    <p class="text-start">Admin <span>Leave a comment</span></p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="width: 360px; height: 400px;">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <h5 class="text-start">POST FORMAT: STANDARD</h5>
+                    <p class="text-start">Admin <span>Leave a comment</span></p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="width: 360px; height: 400px;">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <h5 class="text-start">POST FORMAT: STANDARD</h5>
+                    <p class="text-start">Admin <span>Leave a comment</span></p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="width: 360px; height: 400px;">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <h5 class="text-start">POST FORMAT: STANDARD</h5>
+                    <p class="text-start">Admin <span>Leave a comment</span></p>
+                    
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card" style="width: 360px; height: 400px;">
+                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
+                  </figure>
+                  <div class="card-body">
+                    <h5 class="text-start">POST FORMAT: STANDARD</h5>
+                    <p class="text-start">Admin <span>Leave a comment</span></p>
+                    
+                  </div>
+                </div>
+              </div>
+          </div>
+          </div> 
+        </div>
+      </div>
+    </div>
+
+      <!-- MARCAS -->
+      <div class="lineSeparated">
+        <div class="container">
+          <section class="customer-logos slider">
+              <div class="slide"><img class="imgslidermarca" src="images/adidas.png" alt="logo"></div>
+              <div class="slide"><img class ="imgslidermarca" src="images/facebook.png" alt="logo"></div>
+              <div class="slide"><img class="imgslidermarca" src="images/google.png" alt="logo"></div>
+              <div class="slide"><img class="imgslidermarca" src="images/instagram.png" alt="logo"></div>
+              <div class="slide"><img class="imgslidermarca" src="images/nike.png" alt="logo"></div>
+              <div class="slide"><img class="imgslidermarca" src="images/twitter.png" alt="logo"></div>
+              <div class="slide"><img class="imgslidermarca" src="images/uber.png" alt="logo"></div>
+              <div class="slide"><img class="imgslidermarca" src="images/youtube.png" alt="logo"></div>
+          </section>
+        </div>
+      </div>
+
+
+<%- include('./partials/footer') %> 
