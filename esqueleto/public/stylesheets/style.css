@@ -150,21 +150,54 @@ a:hover{
 
 /*---------------------LOGIN Y REGISTRO--------------------*/
 
+.fondoregister{
+  background-image: url('../images/bgregister.jpg');
+  filter:brightness(0.4);
+}
+
 .contenedor-formulario{
-  border: 1px solid aquamarine;
+  background-color: #2e3d51;
 }
 
 .registro{
-  padding: 50px 70px;
+  padding: 90px 70px;
 }
 
+.sign-in{
+  background-color: #455469;
+  border: none;
+  border-radius: 30px 0px 0px 30px;
+  color:rgb(216, 216, 216);
+  font-size: 12px;
+  padding: 9px 10px 7px 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.sign-up{
+  border: none;
+  background-color: #5fd1c1;
+  color: rgb(216, 216, 216);
+  padding: 9px 15px 7px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 0px 30px 30px 0px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.label-formulario{
+  color: rgb(216, 216, 216);
+}
 .input-formulario{
   display: block;
   width: 100%;
+  background-color: transparent;
   border: none;
-  border-bottom: 1px solid silver;
+  border-bottom: 1px solid rgb(126, 126, 126);
   margin-top: 10px;
   margin-bottom: 20px;
+  color: rgb(216, 216, 216);
+}
+.input-formulario:focus{
+  outline: none;
 }
 
 .checkbox-formulario{
@@ -174,9 +207,17 @@ a:hover{
   font-size: 11px;
   position: absolute;
   top: 1px;
+  color: rgb(126, 126, 126);
 }
 
 .boton-formulario{
   display: block;
   margin-top: 20px;
+  border: none;
+  background-color: #5fd1c1;
+  color: white;
+  width: 80px;
+  height: 30px;
+  border-radius: 25px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
 }
