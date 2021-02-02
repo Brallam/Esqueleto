@@ -162,6 +162,9 @@ a:hover{
 .registro{
   padding: 90px 70px;
 }
+.login{
+  padding: 120px 70px;
+}
 
 .sign-in{
   background-color: #455469;
@@ -175,10 +178,9 @@ a:hover{
 .sign-up{
   border: none;
   background-color: #5fd1c1;
-  color: rgb(216, 216, 216);
+  color:white;
   padding: 9px 15px 7px 10px;
   font-size: 12px;
-  font-weight: 600;
   border-radius: 0px 30px 30px 0px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }

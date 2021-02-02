@@ -7,10 +7,10 @@
             <div class="col-6 fondoregister"></div>
             <div class="col-6 contenedor-formulario">
                 <div class="d-flex justify-content-end" style="margin: 20px 10px 0 0;">
-                    <button class="sign-in">Sign In</button>
-                    <button class="sign-up">Sign Up</button>
+                    <button onclick="signin()" class="sign-in">Sign In</button>
+                    <button onclick="signup()" class="sign-up">Sign Up</button>
                 </div>
-                <div class="registro">
+                <div class="registro" id="registro" style="display: none;">
                     <form action="" method="POST">
                         <label class="label-formulario" for="nameregister">Name</label>
                         <input class="input-formulario" type="text" name="nameregister" id="nameregister" placeholder="Enter your name">
@@ -32,13 +32,27 @@
                     </form>
                 </div>
 
-                <div class="login">
+                <div class="login" id="login">
+                    <form action="" method="">
+                        <label class="label-formulario" for="emaillogin">E-mail</label>
+                        <input class="input-formulario" type="email" name="emaillogin" id="emaillogin" placeholder="Enter your email">
 
+                        <label class="label-formulario" for="passregister">Password</label>
+                        <input class="input-formulario" type="password" name="passlogin" id="passlogin" placeholder="Enter your full name">
+
+                        <div style="position: relative;">
+                        <input class="checkbox-formulario" type="checkbox" name="checkboxlogin" id="checkboxlogin"><span class="texto-checkbox">Remember me</span>
+                        </div>
+
+                        <button class="boton-formulario" type="submit">Sign In</button>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="/javascripts/loginRegister.js"></script>
 
 
 
