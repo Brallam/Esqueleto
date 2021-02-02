@@ -1,0 +1,4 @@
+`id` INT NOT NULL AUTO_INCREMENT,
+  `userid` INT NOT NULL,
+  `productid` INT NOT NULL,
+  `cantidad` INT(11) NOT NULL,
