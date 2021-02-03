@@ -1,0 +1,73 @@
+<%- include('./partials/head') %>
+<%- include('./partials/header') %>
+
+
+<div>
+    <div class="container d-flex justify-content-center">
+        <div class="row contenedorProfile" style="height: 600px; width: 1000px; margin: 30px 0 80px 0;">
+            <div class="col-6 fondoedit">
+                <div class="d-flex justify-content-end align-items-center" style="height: 100%;">
+                    <ul>
+                        <li><button onclick="editprofile()">Edit profile</button></li>
+                        <li><button>Shopping history</button></li>
+                        <li><button>Coming soon</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-6 contenedor-formulario">
+                <!-- EDIT PROFILE -->
+                <div class="edit" id="edit">
+                    <form action="/users/edit" method="POST">
+                        <label class="label-formulario" for="nameedit">Name</label>
+                        <input class="input-formulario" type="text" name="nameedit" id="nameedit" placeholder="Enter your name">
+
+                        <label class="label-formulario" for="nameedit">Last name</label>
+                        <input class="input-formulario" type="text" name="lnameedit" id="lnameedit" placeholder="Enter your last name">
+
+                        <label class="label-formulario" for="dniedit">DNI</label>
+                        <input class="input-formulario" type="text" name="dniedit" id="dniedit" placeholder="Enter your DNI">
+
+                        <label class="label-formulario" for="nameedit">Phone</label>
+                        <input class="input-formulario" type="text" name="phoneedit" id="phoneedit" placeholder="Enter your last name">
+
+                        <label class="label-formulario" for="passedit">Password</label>
+                        <input class="input-formulario" type="password" name="passedit" id="passedit" placeholder="Enter your full name">
+
+                        <label class="label-formulario" for="rpassedit">Repeat Password</label>
+                        <input class="input-formulario" type="password" name="rpassedit" id="rpassedit" placeholder="Enter your full name">
+
+                        <label class="label-formulario" for="emailedit">E-mail</label>
+                        <input class="input-formulario" type="email" name="emailedit" id="emailedit" placeholder="Enter your email">
+
+                        <button class="boton-formulario" type="submit">Update</button>
+                    </form>
+                </div>
+                <!-- FIN EDIT PROFILE -->
+                <!-- COMPRAS REALIZADAS -->
+                <div class="login" id="login" style="display: none;">
+                    <form action="/users/login" method="POST">
+                        <label class="label-formulario" for="emaillogin">E-mail</label>
+                        <input class="input-formulario" type="email" name="emaillogin" id="emaillogin" placeholder="Enter your email">
+
+                        <label class="label-formulario" for="passregister">Password</label>
+                        <input class="input-formulario" type="password" name="passlogin" id="passlogin" placeholder="Enter your full name">
+
+                        <div style="position: relative;">
+                       
+                        <input class="checkbox-formulario" type="checkbox" name="checkboxlogin" id="checkboxlogin" ><span class="texto-checkbox" >Remember me</span>
+                        </div>
+
+                        <button class="boton-formulario " type="submit">Sign In</button>
+                    </form>
+                </div>
+                <!-- FIN DE COMPRAS REALIZADAS -->
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<%- include('./partials/footer') %> 

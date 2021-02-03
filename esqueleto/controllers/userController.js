@@ -53,6 +53,9 @@ const users = {
       res.cookie("usercookie","",{maxAge:-1})
     }
     res.redirect("/")
+  },
+  profile:(req,res)=>{
+    res.render('profile')
   }
 }
 
