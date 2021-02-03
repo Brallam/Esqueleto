@@ -40,12 +40,19 @@ const users = {
       }
       let rem=req.body.checkboxlogin
       if(rem=="on"){
-        res.cookie("usercookie",req.session.userLog.email,{maxAge:3.154e+10})
+        res.cookie("usercookie",req.session.user.email,{maxAge:3.154e+10})
        }
       res.locals.user = req.session.user
       return res.redirect('/')
     })
 
+  },
+  close:(req,res)=>{
+    req.session.destroy();
+    if(req.cookies.usercookie){
+      res.cookie("usercookie","",{maxAge:-1})
+    }
+    res.redirect("/")
   }
 }
 
