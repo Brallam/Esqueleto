@@ -29,18 +29,21 @@ const users = {
         where:{
             email:req.body.emaillogin
         }
-    }).then((user)=>{
-      req.session.userLog={
-        id:user.id,
-        name:user.nombre,
-        apellido:user.apellido,
-        email:user.email,
-        dni:user.dni,
-        telefono:user.telefono,
+    }).then((usuario)=>{
+      req.session.user={
+        id:usuario.id,
+        name:usuario.nombre,
+        apellido:usuario.apellido,
+        email:usuario.email,
+        dni:usuario.dni,
+        telefono:usuario.telefono,
       }
-      console.log(req.session.userLog)
-      res.locals.user = req.session.userLog
-      res.redirect('/')
+      console.log(req.session.user)
+      console.log(req.session.user.name)
+      res.locals.user = req.session.user
+      console.log(res.locals.user.email);
+
+      return res.redirect('/')
     })
 
   }
