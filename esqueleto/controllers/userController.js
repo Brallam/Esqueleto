@@ -38,7 +38,10 @@ const users = {
         dni:user.dni,
         telefono:user.telefono,
       }
-      console.log(req.session.userLog)
+      let rem=req.body.checkboxlogin
+      if(rem=="on"){
+        res.cookie("usercookie",req.session.userLog.email,{maxAge:3.154e+10})
+       }
       res.locals.user = req.session.userLog
       res.redirect('/')
     })
