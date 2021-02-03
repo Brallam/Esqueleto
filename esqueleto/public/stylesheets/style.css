@@ -153,10 +153,12 @@ a:hover{
 .fondoregister{
   background-image: url('../images/bgregister.jpg');
   filter:brightness(0.4);
+  border-radius: 8px 0 0 8px;
 }
 
 .contenedor-formulario{
   background-color: #2e3d51;
+  border-radius: 0px 8px 8px 0px;
 }
 
 .registro{
