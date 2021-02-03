@@ -22,7 +22,30 @@ const users = {
         .catch(errors => {
             console.log(errors)
         })
-} 
+},
+    procesoLoguin:(req,res)=>{
+
+      db.usuarios.findOne({
+        where:{
+            email:req.body.emaillogin
+        }
+    }).then((user)=>{
+      req.session.userLog={
+        id:user.id,
+        name:user.nombre,
+        apellido:user.apellido,
+        email:user.email,
+        dni:user.dni,
+        telefono:user.telefono,
+      }
+      console.log(req.session.userLog)
+      res.locals.user = req.session.userLog
+      res.redirect('/')
+    })
+
+  }
 }
+
+
 
 module.exports = users
