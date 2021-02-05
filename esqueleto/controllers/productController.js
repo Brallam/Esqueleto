@@ -9,7 +9,9 @@ const products = {
             }) //muestra información de prueba
         })
     },
-
+    creacionDeProductos: function(req,res) {
+        res.render('creacionDeProducto')
+    },
     crearProducto: function(req,res){
         db.productos.create(
             {

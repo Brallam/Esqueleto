@@ -255,3 +255,24 @@ a:hover{
   width: 100%;
   padding-left: 10px;
 }
+
+/* --------------ADD PRODUCT---------------- */
+
+.container-addProduct{
+  background-color: #2e3d51;
+  border-radius: 8px;
+  margin: 30px 0;
+  width: 1000px;
+}
+.container-formProduct{
+  width: 400px;
+  padding: 30px 0px;
+}
+.imagenDeMuestras{
+  width: 300px;
+  height: 400px;
+background-color: #fff;
+}
+.contenedor-imgDeMuestra{
+  padding: 0px;
+}
