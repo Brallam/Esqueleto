@@ -1,5 +1,6 @@
 const db = require('../database/models')
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+
 
 const users = {
     register: function(req, res) {
@@ -54,9 +55,44 @@ const users = {
     }
     res.redirect("/")
   },
+  //Perfil y configuraciones
   profile:(req,res)=>{
-    res.render('profile')
+    console.log(req.session.user)
+    db.usuarios.findAll({
+      where:{id:req.params.id}, 
+    })
+    
+    .then((m)=>{
+      if(m.lenght!=0){
+        res.render("profile",{
+          title:"Perfil",
+          userP:m[0],
+          user:req.session.user
+        })
+      }
+      else{ 
+        res.render("/")
+      }
+    })
+  
+  },
+  editprofile:(req,res,next)=>{
+    let ids=req.params.id;
+    console.log(ids)
+    db.usuarios.findOne({where:{id:ids}})
+    .then((newuser)=>{
+      let nuevouser={
+        nombre: req.body.nameedit.trim(),
+        apellido: req.body.lnameedit.trim(),
+        dni:req.body.dniedit,
+        telefono:req.body.phoneedit,
+      }
+      req.session.user.name= req.body.nameedit.trim()
+      db.usuarios.update(nuevouser, {where: {id:ids}})
+      res.redirect('/users/profile/' + ids)
+      })
   }
+
 }
 
 

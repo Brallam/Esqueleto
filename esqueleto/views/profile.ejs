@@ -17,27 +17,27 @@
             <div class="col-6 contenedor-formulario">
                 <!-- EDIT PROFILE -->
                 <div class="edit" id="edit">
-                    <form action="/users/edit" method="POST">
+                    <form action="/users/edit/<%-user.id%>" method="POST">
                         <label class="label-formulario" for="nameedit">Name</label>
-                        <input class="input-formulario" type="text" name="nameedit" id="nameedit" placeholder="Enter your name">
+                        <input class="input-formulario" type="text" name="nameedit" id="nameedit" placeholder="Enter your name" value="<%-userP.nombre%>" >
 
                         <label class="label-formulario" for="nameedit">Last name</label>
-                        <input class="input-formulario" type="text" name="lnameedit" id="lnameedit" placeholder="Enter your last name">
+                        <input class="input-formulario" type="text" name="lnameedit" id="lnameedit" placeholder="Enter your last name"value="<%-userP.apellido%>">
 
                         <label class="label-formulario" for="dniedit">DNI</label>
-                        <input class="input-formulario" type="text" name="dniedit" id="dniedit" placeholder="Enter your DNI">
+                        <input class="input-formulario" type="text" name="dniedit" id="dniedit" placeholder="Enter your DNI" value="<%-userP.dni%>">
 
                         <label class="label-formulario" for="nameedit">Phone</label>
-                        <input class="input-formulario" type="text" name="phoneedit" id="phoneedit" placeholder="Enter your last name">
+                        <input class="input-formulario" type="text" name="phoneedit" id="phoneedit" placeholder="Enter your last name"value="<%-userP.telefono%>" >
 
                         <label class="label-formulario" for="passedit">Password</label>
-                        <input class="input-formulario" type="password" name="passedit" id="passedit" placeholder="Enter your full name">
+                        <input class="input-formulario" type="password" name="passedit" id="passedit" placeholder="Enter your full name"value=" " >
 
                         <label class="label-formulario" for="rpassedit">Repeat Password</label>
-                        <input class="input-formulario" type="password" name="rpassedit" id="rpassedit" placeholder="Enter your full name">
+                        <input class="input-formulario" type="password" name="rpassedit" id="rpassedit" placeholder="Enter your full name"value=" " >
 
                         <label class="label-formulario" for="emailedit">E-mail</label>
-                        <input class="input-formulario" type="email" name="emailedit" id="emailedit" placeholder="Enter your email">
+                        <input class="input-formulario" disabled type="email" name="emailedit" id="emailedit" placeholder="Enter your email" value="<%-userP.email%>">
 
                         <button class="boton-formulario" type="submit">Update</button>
                     </form>

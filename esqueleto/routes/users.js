@@ -8,7 +8,12 @@ const checkuser=require("../middlewares/localsUserCheck")
 router.get('/',checkuser,userController.register);
 router.post("/registro",checkuser,userController.procesoRegister)
 router.post("/login",checkuser,userController.procesoLoguin)
-router.get("/profile",userController.profile)
+
+
+//Perfil y configuraciones
+router.get("/profile/:id",userController.profile)
+router.post("/edit/:id?",userController.editprofile)
+
 router.get("/close",userController.close)
 
 
