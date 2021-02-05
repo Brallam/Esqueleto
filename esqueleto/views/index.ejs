@@ -59,42 +59,8 @@
           <div class="col-9">
             <h4>FROM THE BLOG</h4>
             <div class="center" style="text-align:center; color: black; height: 300px;">
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <!-- Primer banner con FOREACH-->
+              <% productos.forEach(producto=>{ %> 
               <div>
                 <div class="card">
                   <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
@@ -103,8 +69,8 @@
                   <div class="card-body">
                     <div class="row">
                       <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
+                        <h5 class="card-title"><%- producto.nombre %> </h5>
+                        <p class="card-text">$<%-producto.precio%> </p>
                       </div>
                       <div class="col-6">
                         <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
@@ -113,60 +79,7 @@
                   </div>
                 </div>
               </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <%})%>
           </div>
           </div>
         </div>
@@ -194,114 +107,27 @@
           <div class="col-9">
             <h4>FROM THE BLOG</h4>
             <div class="center" style="text-align:center; color: black; height: 300px;">
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+              <!-- Segundo banner con FOREACH-->
+              <% productos.forEach(producto=>{ %> 
+                <div>
+                  <div class="card">
+                    <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
+                      <img src="/images/card2.jpg" class="card-img-top" alt="...">
+                    </figure>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <h5 class="card-title"><%- producto.nombre %> </h5>
+                          <p class="card-text">$<%-producto.precio%> </p>
+                        </div>
+                        <div class="col-6">
+                          <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card1.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card2.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <div class="card">
-                  <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
-                    <img src="/images/card3.jpg" class="card-img-top" alt="...">
-                  </figure>
-                  <div class="card-body">
-                    <div class="row">
-                      <div class="col-6">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">$PRECIO.</p>
-                      </div>
-                      <div class="col-6">
-                        <button style="height: 40px; background-color: rgb(98, 146, 98); color: white; border:none; margin-top: 5px;">Purchase now</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <%})%>
           </div>
           </div>
           <div class="col-3">
