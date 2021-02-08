@@ -20,7 +20,7 @@
                     <div class="row" style="margin: 0px;">
                         <div class="col-8 d-flex justify-content-center">
                             <div class="container-formProduct">
-                                <form action="" method="POST">
+                                <form action="/products/crearProducto" method="POST">
                                     <label class="label-formulario" for="productName">Nombre del producto</label>
                                     <input class="input-formulario" type="text" name="productName" id="productName" placeholder="Nombre">
                                     <br>
@@ -79,7 +79,29 @@
                                 <td style="padding: 50px 0;">Saco bien lindo</td>
                                 <td style="padding: 50px 0;">$50.000</td>
                                 <td style="padding: 50px 0;">
-                                    <a href="" style="margin-right: 30px;"><i class="bi bi-pencil-fill"></i></a>
+                                    <!-- <a href="" style="margin-right: 30px;"></a> -->
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                      <i class="bi bi-pencil-fill"></i>
+                                    </button>
+                                    <!-- MODAL DE EDICION DE PRODUCTO -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <div class="modal-body" style="color: black;">
+                                            <!-- COPY PASTE -->
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- ///////////////////////////// -->
                                     <a href=""><i class="bi bi-trash-fill"></i></a>
                                 </td>
                               </tr>
