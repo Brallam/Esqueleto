@@ -70,14 +70,15 @@
                             </thead>
                             <tbody style="height: 100px;">
                             <!-- tenes que hacer uin foreach del tr -->
+                          <% productos.forEach(producto=>{ %> 
                               <tr>
                                 <th scope="row">
                                     <figure style="width: 80px;">
                                         <img style="width: 100%;" src="/images/card1.jpg" alt="">
                                     </figure>
                                 </th>
-                                <td style="padding: 50px 0;">Saco bien lindo</td>
-                                <td style="padding: 50px 0;">$50.000</td>
+                                <td style="padding: 50px 0;"><%-producto.nombre%></td>
+                                <td style="padding: 50px 0;">$<%-producto.precio%> </td>
                                 <td style="padding: 50px 0;">
                                     <!-- <a href="" style="margin-right: 30px;"></a> -->
                                     <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -91,13 +92,39 @@
                                             <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Modal title</h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                           </div>
+                                          <form action="" method="POST">
                                           <div class="modal-body" style="color: black;">
-                                            <!-- COPY PASTE -->
+                                            
+                                              <label class="label-formulario" for="nameEdit">Nombre del producto</label>
+                                              <input class="input-formulario" type="text" name="nameEdit" id="nameEdit" placeholder="Nombre">
+                                              <br>
+                                          
+                                              <label class="label-formulario" for="talleEdit">Talle</label>
+                                              <input class="input-formulario" type="text" name="talleEdit" id="talleEdit" placeholder="Talle">
+                                              
+                                              <br>
+                                              <label class="label-formulario" for="colorEdit">Color</label>
+                                              <input class="input-formulario" type="text" name="colorEdit" id="colorEdit" placeholder="Color">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="precioEdit">Precio</label>
+                                              <input class="input-formulario" type="text" name="precioEdit" id="precioEdit" placeholder="Precio">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="descripcionEdit">Descripcion</label>
+                                              <input class="input-formulario" type="text" name="descripcionEdit" id="descripcionEdit" placeholder="Descripcion">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="descuentoEdit">Descuento?</label>
+                                              <input class="input-formulario" type="text" name="descuentoEdit" id="descuentoEdit" placeholder="Descuento">
+                                              <br>
+                                          
                                           </div>
                                           <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <button type="button submit" class="btn btn-primary">Save changes</button>
                                           </div>
+                                        </form>
                                         </div>
                                       </div>
                                     </div>
@@ -105,6 +132,7 @@
                                     <a href=""><i class="bi bi-trash-fill"></i></a>
                                 </td>
                               </tr>
+                              <%})%>
                             </tbody>
                           </table>
                     </div>

@@ -10,7 +10,12 @@ const products = {
         })
     },
     creacionDeProductos: function(req,res) {
-        res.render('creacionDeProducto')
+        db.productos.findAll()
+        .then(function(productosDat){
+            return res.render('creacionDeProducto', {
+                productos: productosDat
+            }) //muestra información de prueba
+        })
     },
     crearProducto: function(req,res){
         db.productos.create(
