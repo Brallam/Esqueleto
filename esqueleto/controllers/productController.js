@@ -20,6 +20,7 @@ const products = {
                 color: req.body.productColor.trim(),
                 precio: Number(req.body.productPrecio),
                 descripcion: req.body.productDescription.trim(),
+                image:(req.files[0])?req.files[0].filename:"default-image.png",
                 descuento: Number(req.body.productDiscount),
                 
             }
@@ -31,6 +32,9 @@ const products = {
             .catch(errors => {
                 console.log(errors)
             })
+    },
+    eliminar:(req,res)=>{
+        db.destroy({where:{id:req.params.id}})
     }
 }
 

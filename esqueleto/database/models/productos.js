@@ -32,6 +32,10 @@ module.exports = (sequelize, dataTypes) => {
         descuento:{
             type:dataTypes.INTEGER(11),
             allowNull:true
+        },
+        image:{
+            type:dataTypes.STRING(400),
+            allowNull:true
         }
     }
 
