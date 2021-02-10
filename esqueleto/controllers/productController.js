@@ -55,12 +55,12 @@ const products = {
     },
     editarProducto: function(req,res){
         db.productos.update({
-            nombre: req.body.nameEdit.trim(),
-            talle: req.body.talleEdit.trim(),
-            color: req.body.colorEdit.trim(),
-            precio: Number(req.body.precioEdit),
-            descuento: Number(req.body.descuentoEdit),
-            descripcion: req.body.descripcionEdit.trim(),
+            nombre: req.body.productName.trim(),
+            talle: req.body.productTalle.trim(),
+            color: req.body.productColor.trim(),
+            precio: Number(req.body.productPrecio),
+            descuento: Number(req.body.productDiscount),
+            descripcion: req.body.productDescription.trim(),
         }, {
             where: {
                 id: req.params.id
@@ -68,7 +68,7 @@ const products = {
         })  
         .then(result => {
             console.log(result)
-            res.redirect("/products/creacionDeProducto")
+            res.redirect("/products/edicionDeProducto/"+req.params.id)
         })
     }
 }

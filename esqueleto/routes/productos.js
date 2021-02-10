@@ -4,7 +4,7 @@ const productController = require('../controllers/productController')
 
 /*Routes*/
 
-router.get('/',productController.listado);
+router.get('/listadoProductos',productController.listado);
 router.get('/creacionDeProducto',productController.creacionDeProductos);
 router.post('/crearProducto',productController.crearProducto)
 
