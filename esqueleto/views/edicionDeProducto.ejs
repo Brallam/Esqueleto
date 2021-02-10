@@ -8,16 +8,16 @@
         <div class="container-addProduct">
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                  <a class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Crear Producto</a>
+                  <a class="nav-link" id="nav-home-tab" data-bs-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="false">Crear Producto</a>
                   <a class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Listado de productos</a>
-                  <a class="nav-link" id="nav-edit-tab" data-bs-toggle="tab" href="#nav-edit" role="tab" aria-controls="nav-edit" aria-selected="true">Editar Producto</a>
+                  <a class="nav-link active" id="nav-edit-tab" data-bs-toggle="tab" href="#nav-edit" role="tab" aria-controls="nav-edit" aria-selected="true">Editar Producto</a>
                   <a class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Listado de usuarios</a>
                 </div>
               </nav>
               
               <div class="tab-content" id="nav-tabContent">
                 <!-- crear productos -->
-                <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="tab-pane fade" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
                     <div class="row" style="margin: 0px;">
                         <div class="col-8 d-flex justify-content-center">
                             <div class="container-formProduct">
@@ -82,6 +82,54 @@
                                 <td style="padding: 50px 0;">$<%-producto.precio%> </td>
                                 <td style="padding: 50px 0;">
                                    <a href="/products/edicionDeProducto/<%-producto.id%>" style="margin-right: 30px;"><i class="bi bi-pencil-fill"></i></a> 
+                                    <!-- 
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" value="">
+                                      <i class="bi bi-pencil-fill"></i>
+                                    </button>
+                                     MODAL DE EDICION DE PRODUCTO
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <form action="/products/editarProducto/<%-producto.id%>" method="POST">
+                                          <div class="modal-body" style="color: black;">
+                                            
+                                              <label class="label-formulario" for="nameEdit">Nombre del producto</label>
+                                              <input class="input-formulario" style="color: black;" type="text" name="nameEdit" id="nameEdit" value="<%-producto.nombre%>">
+                                              <br>
+                                          
+                                              <label class="label-formulario" for="talleEdit">Talle</label>
+                                              <input class="input-formulario" type="text" name="talleEdit" id="talleEdit" value="<%-producto.talle%>">
+                                              
+                                              <br>
+                                              <label class="label-formulario" for="colorEdit">Color</label>
+                                              <input class="input-formulario" type="text" name="colorEdit" id="colorEdit" placeholder="Color">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="precioEdit">Precio</label>
+                                              <input class="input-formulario" type="text" name="precioEdit" id="precioEdit" placeholder="Precio">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="descripcionEdit">Descripcion</label>
+                                              <input class="input-formulario" type="text" name="descripcionEdit" id="descripcionEdit" placeholder="Descripcion">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="descuentoEdit">Descuento?</label>
+                                              <input class="input-formulario" type="text" name="descuentoEdit" id="descuentoEdit" placeholder="Descuento">
+                                              <br>
+                                          
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button submit" class="btn btn-primary">Guardar</button>
+                                          </div>
+                                        </form>
+                                        </div>
+                                      </div>
+                                    </div> -->
                                     <!-- ///////////////////////////// -->
                                     <a href=""><i class="bi bi-trash-fill"></i></a>
                                 </td>
@@ -92,32 +140,32 @@
                     </div>
                 </div>
                 <!-- editar producto -->
-                <div class="tab-pane fade" id="nav-edit" role="tabpanel" aria-labelledby="nav-edit-tab">
+                <div class="tab-pane fade show active" id="nav-edit" role="tabpanel" aria-labelledby="nav-edit-tab">
                   <div class="row" style="margin: 0px;">
                       <div class="col-8 d-flex justify-content-center">
                           <div class="container-formProduct">
-                              <form action="/" method="POST">
+                              <form action="/products/edicionDeProducto/<%-productoEdit.id%>" method="POST">
                                   <label class="label-formulario" for="productName">Nombre del producto</label>
-                                  <input class="input-formulario" type="text" name="productName" id="productName" value="">
+                                  <input class="input-formulario" type="text" name="productName" id="productName" value="<%-productoEdit.nombre%>">
                                   <br>
                               
                                   <label class="label-formulario" for="productTalle">Talle</label>
-                                  <input class="input-formulario" type="text" name="productTalle" id="productTalle"value="">
+                                  <input class="input-formulario" type="text" name="productTalle" id="productTalle"value="<%-productoEdit.talle%>">
                                   
                                   <br>
                                   <label class="label-formulario" for="productColor">Color</label>
-                                  <input class="input-formulario" type="text" name="productColor" id="productColor" value="">
+                                  <input class="input-formulario" type="text" name="productColor" id="productColor" value="<%-productoEdit.color%>">
                               
                                   <br>
                                   <label class="label-formulario" for="productPrecio">Precio</label>
-                                  <input class="input-formulario" type="text" name="productPrecio" id="productPrecio" value="">
+                                  <input class="input-formulario" type="text" name="productPrecio" id="productPrecio" value="<%-productoEdit.precio%>">
                               
                                   <br>
                                   <label class="label-formulario" for="productDescription">Descripcion</label>
-                                  <input class="input-formulario" type="text" name="productDescription" id="productDescription" value="">
+                                  <input class="input-formulario" type="text" name="productDescription" id="productDescription" value="<%-productoEdit.precio%>">
                                   <br>
                                   <label class="label-formulario" for="productDiscount">Descuento?</label>
-                                  <input class="input-formulario" type="text" name="productDiscount" id="productDiscount"value="">
+                                  <input class="input-formulario" type="text" name="productDiscount" id="productDiscount"value="<%-productoEdit.descuento%>">
                                   <br>
                               
                                   <button class="boton-formulario" type="submit">Guardar</button>

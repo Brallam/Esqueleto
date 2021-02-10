@@ -36,6 +36,40 @@ const products = {
             .catch(errors => {
                 console.log(errors)
             })
+    },
+    edicionDeProductos: function (req, res) {
+
+        let id = db.productos.findByPk(req.params.id)
+        let todos = db.productos.findAll()
+        Promise.all([id, todos])
+            .then(function ([idProd, todosProd]) {
+                res.render('edicionDeProducto', {
+                    productoEdit: idProd,
+                    productos: todosProd
+                })
+            })
+            .catch(errores => {
+                console.log(errores)
+            })
+
+    },
+    editarProducto: function(req,res){
+        db.productos.update({
+            nombre: req.body.nameEdit.trim(),
+            talle: req.body.talleEdit.trim(),
+            color: req.body.colorEdit.trim(),
+            precio: Number(req.body.precioEdit),
+            descuento: Number(req.body.descuentoEdit),
+            descripcion: req.body.descripcionEdit.trim(),
+        }, {
+            where: {
+                id: req.params.id
+            }
+        })  
+        .then(result => {
+            console.log(result)
+            res.redirect("/products/creacionDeProducto")
+        })
     }
 }
 
