@@ -3,13 +3,15 @@ const router = express.Router();
 const productController = require('../controllers/productController')
 //Middlewares//
 const multer=require("../middlewares/multerproducts")
-const upload = multer;
+
 /*Routes*/
 
 router.get('/',productController.listado);
 //subida//
-router.get('/creacionDeProducto',upload.array("photos",10),productController.creacionDeProductos);
-router.post('/',productController.crearProducto)
+router.get('/creacionDeProducto',productController.creacionDeProductos);
+router.post('/crear',multer.any(),productController.crearProducto)
 //eliminar//
-router.post("/delete",productController.eliminar)
+router.get("/delete/:id?",productController.eliminar)
+
+
 module.exports = router;

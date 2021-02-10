@@ -20,7 +20,7 @@
                     <div class="row" style="margin: 0px;">
                         <div class="col-8 d-flex justify-content-center">
                             <div class="container-formProduct">
-                                <form action="" method="POST">
+                                <form action="/products/crear" method="POST" enctype="multipart/form-data">
                                     <label class="label-formulario" for="productName">Nombre del producto</label>
                                     <input class="input-formulario" type="text" name="productName" id="productName" placeholder="Nombre">
                                     <br>
@@ -44,9 +44,14 @@
                                     <label class="label-formulario" for="productDiscount">Descuento?</label>
                                     <input class="input-formulario" type="text" name="productDiscount" id="productDiscount" placeholder="Descuento">
                                     <br>
-                                    <i class="fas fa-images"></i>
-                                    <h6>Carga aqui las imagenes</h6>
-                                    <input type="file" name="image" class="imagen" accept="image/png, image/jpg, image/jpeg, image/gif">
+                                    <div class="uploadimage col-12">
+                                      <i class="fas fa-images col-12 imagen"></i>
+                                      <h6>Carga aqui las imagenes</h6>
+                                      <div class="alert alert-secondary" role="alert">
+                                        Se recomienda imagenes 1180x500
+                                      </div>
+                                      <input class="col-12" type="file" name="image"  accept="image/png, image/jpg, image/jpeg, image/gif">
+                                    </div>
                                     <button class="boton-formulario" type="submit">Crear</button>
                                 </form>
                             </div>
@@ -72,19 +77,69 @@
                             </thead>
                             <tbody style="height: 100px;">
                             <!-- tenes que hacer uin foreach del tr -->
+                          <% productos.forEach(producto=>{ %> 
                               <tr>
                                 <th scope="row">
                                     <figure style="width: 80px;">
                                         <img style="width: 100%;" src="/images/card1.jpg" alt="">
                                     </figure>
                                 </th>
-                                <td style="padding: 50px 0;">Saco bien lindo</td>
-                                <td style="padding: 50px 0;">$50.000</td>
+                                <td style="padding: 50px 0;"><%-producto.nombre%></td>
+                                <td style="padding: 50px 0;">$<%-producto.precio%> </td>
                                 <td style="padding: 50px 0;">
-                                    <a href="" style="margin-right: 30px;"><i class="bi bi-pencil-fill"></i></a>
-                                    <a href=""><i class="bi bi-trash-fill"></i></a>
+                                    <!-- <a href="" style="margin-right: 30px;"></a> -->
+                                    <button type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                      <i class="bi bi-pencil-fill"></i>
+                                    </button>
+                                    <!-- MODAL DE EDICION DE PRODUCTO -->
+                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                      <div class="modal-dialog">
+                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Modal title</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                          </div>
+                                          <form action="" method="POST">
+                                          <div class="modal-body" style="color: black;">
+                                            
+                                              <label class="label-formulario" for="nameEdit">Nombre del producto</label>
+                                              <input class="input-formulario" type="text" name="nameEdit" id="nameEdit" placeholder="Nombre">
+                                              <br>
+                                          
+                                              <label class="label-formulario" for="talleEdit">Talle</label>
+                                              <input class="input-formulario" type="text" name="talleEdit" id="talleEdit" placeholder="Talle">
+                                              
+                                              <br>
+                                              <label class="label-formulario" for="colorEdit">Color</label>
+                                              <input class="input-formulario" type="text" name="colorEdit" id="colorEdit" placeholder="Color">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="precioEdit">Precio</label>
+                                              <input class="input-formulario" type="text" name="precioEdit" id="precioEdit" placeholder="Precio">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="descripcionEdit">Descripcion</label>
+                                              <input class="input-formulario" type="text" name="descripcionEdit" id="descripcionEdit" placeholder="Descripcion">
+                                          
+                                              <br>
+                                              <label class="label-formulario" for="descuentoEdit">Descuento?</label>
+                                              <input class="input-formulario" type="text" name="descuentoEdit" id="descuentoEdit" placeholder="Descuento">
+                                              <br>
+                                          
+                                          </div>
+                                          <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                            <button type="button submit" class="btn btn-primary">Save changes</button>
+                                          </div>
+                                        </form>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <!-- ///////////////////////////// -->
+                                    <a href="/products/delete/<%-producto.id%>"><i class="bi bi-trash-fill"></i></a>
                                 </td>
                               </tr>
+                              <%})%>
                             </tbody>
                           </table>
                     </div>

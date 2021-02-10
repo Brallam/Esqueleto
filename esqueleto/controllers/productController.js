@@ -10,7 +10,12 @@ const products = {
         })
     },
     creacionDeProductos: function(req,res) {
-        res.render('creacionDeProducto')
+        db.productos.findAll()
+        .then(function(productosDat){
+            return res.render('creacionDeProducto', {
+                productos: productosDat
+            }) //muestra información de prueba
+        })
     },
     crearProducto: function(req,res){
         db.productos.create(
@@ -27,14 +32,15 @@ const products = {
         )
             .then(result => {
                 console.log(result)
-                return res.redirect('/products');
+                return res.redirect('/products/creacionDeProducto');
               })
             .catch(errors => {
                 console.log(errors)
             })
     },
     eliminar:(req,res)=>{
-        db.destroy({where:{id:req.params.id}})
+        db.productos.destroy({where:{id:req.params.id}})
+        res.redirect("/products/creacionDeProducto")
     }
 }
 
