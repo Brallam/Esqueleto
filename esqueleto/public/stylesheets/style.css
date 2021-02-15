@@ -5,7 +5,14 @@ body {
   padding: 0px;
   margin: 0px;
 }
-
+button{
+  border: 0px solid rgba(250, 250, 250);
+  background-color: transparent;
+  color: black;
+}
+button:focus{
+  outline: none;
+}
 a {
   color: silver;
   text-decoration: none;
@@ -275,4 +282,52 @@ background-color: #fff;
 }
 .contenedor-imgDeMuestra{
   padding: 0px;
+}
+
+/* administrar-listado de productos */
+.pencil-edit{
+  background-color: transparent;
+  margin-right: 30px;
+  border: none;
+  color: silver;
+}
+.pencil-edit:hover{
+  color: aquamarine;
+}
+
+
+/* --------------listado-productos -----------*/
+.divider{
+  border-top: 1px solid rgba(0,0,0,.125);
+}
+.product-categories{
+  background-color: rgb(240, 240, 240);
+  padding: 10px 10px;
+  width: 210px;
+}
+.contenedor-listado-productos{
+  margin: 50px 0;
+}
+
+.listado-card-precio{
+  font-size: 20px;
+  color: black;
+}
+
+.listado-card-nombre{
+  font-size: 16px;
+  color: black; 
+}
+.boton-nav-product-categories{
+  padding: 10px 0;
+}
+.boton-nav-product-categories h6{
+  margin: 0;
+}
+.accordion-button{
+  padding-left: 5px;
+  color: rgb(121, 121, 121);
+}
+.boton-nav-product-categories button{
+  color: rgb(121, 121, 121);
 }

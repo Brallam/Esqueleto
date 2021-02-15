@@ -6,12 +6,14 @@ const multer=require("../middlewares/multerproducts")
 
 /*Routes*/
 
-router.get('/',productController.listado);
-//subida//
+router.get('/listadoProductos',productController.listado);
 router.get('/creacionDeProducto',productController.creacionDeProductos);
 router.post('/crear',multer.any(),productController.crearProducto)
 //eliminar//
 router.get("/delete/:id?",productController.eliminar)
 
+
+router.get('/edicionDeProducto/:id',productController.edicionDeProductos);
+router.post('/editarProducto/:id',productController.editarProducto)
 
 module.exports = router;
