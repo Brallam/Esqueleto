@@ -193,14 +193,16 @@
                                 </thead>
                                 <tbody style="height: 100px;">
                                 <!-- tenes que hacer uin foreach del tr -->
+                                <%user.forEach(usuario=>{%> 
                                   <tr>
-                                    <th scope="row">Juan</th><!-- nombre -->
-                                    <td >juan@juan.com</td><!-- email -->
+                                    <th scope="row"><%-usuario.nombre%> </th><!-- nombre -->
+                                    <td ><%-usuario.email%></td><!-- email -->
                                     <td >
                                         <a href="" style="margin-right: 30px;"><i class="bi bi-pencil-fill"></i></a>
                                         <a href=""><i class="bi bi-trash-fill"></i></a>
                                     </td>
                                   </tr>
+                                  <%})  %> 
                                 </tbody>
                               </table>
                         </div>
