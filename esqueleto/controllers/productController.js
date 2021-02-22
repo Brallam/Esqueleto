@@ -88,6 +88,9 @@ const products = {
     },
     cart:(req,res)=>{
         res.render('cart')
+    },
+    productDetail:(req,res)=>{
+        res.render('productDetail')
     }
 }
 
