@@ -4,13 +4,8 @@ const products = {
     listado: function(req,res) {
         db.productos.findAll()
         .then(function(productosDat){
-            let productos=productosDat
-            db.userios.findAll()
-            .then(users=>{
             return res.render('listadoProductos', {
-                productos: productos,
-                users:users
-            })
+                productos: productosDat,
             }) //muestra información de prueba
         })
     },
@@ -59,11 +54,13 @@ const products = {
 
         let id = db.productos.findByPk(req.params.id)
         let todos = db.productos.findAll()
-        Promise.all([id, todos])
-            .then(function ([idProd, todosProd]) {
+        let user= db.usuarios.findAll()
+        Promise.all([id,todos,user])
+            .then(function ([id, todos,user]) {
                 res.render('edicionDeProducto', {
-                    productoEdit: idProd,
-                    productos: todosProd
+                    productoEdit: id,
+                    productos: todos,
+                    user:user
                 })
             })
             .catch(errores => {
