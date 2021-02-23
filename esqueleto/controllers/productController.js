@@ -86,6 +86,12 @@ const products = {
             console.log(result)
             res.redirect("/products/edicionDeProducto/"+req.params.id)
         })
+    },
+    cart:(req,res)=>{
+        res.render('cart')
+    },
+    productDetail:(req,res)=>{
+        res.render('productDetail')
     }
 }
 

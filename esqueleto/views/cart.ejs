@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<%- include('./partials/head') %>
+<body>
+<%- include('./partials/header') %>
+
+
+
+<div class="container">
+    <table class="table table-dark mt-5">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Image</th>
+            <th scope="col">Product</th>
+            <th scope="col">Price</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <!-- hacer bucle del tr -->
+          <tr>
+            <th scope="row d-flex justify-content-center" style="padding: 55px 0px 0px 40px;"><a href=""><i class="bi bi-trash-fill"></i></a></th>
+            <td class="td-img">
+                <figure class="figureCart">
+                    <img src="/images/card1.jpg" alt="">
+                </figure>
+            </td>
+            <td class="td-cart">Nombre de producto</td>
+            <td class="td-cart">$PRECIO</td>
+            <td class="td-cart">Cantidad</td>
+            <td class="td-cart">Total</td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <div>
+          <h3>Cart totals</h3>
+          <table class="table table-dark">
+            <tbody>
+            <!-- hacer bucle del tr -->
+              <tr>
+                <th class="th-cart-total "scope="row">Subtotal</th>
+                <td class="th-cart-total">$PRECIO</td>
+              </tr>
+              <tr>
+                <th class="th-cart-total " scope="row">Total</th>
+                <td class="th-cart-total">$PRECIO</td>
+              </tr>
+            </tbody>
+          </table>
+          <div>
+              <button class="button-page mb-5">PROCED TO CHECKOUT</button>
+          </div>
+      </div>
+</div>
+
+
+<%- include('./partials/footer') %> 

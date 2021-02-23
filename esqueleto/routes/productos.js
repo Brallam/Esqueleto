@@ -9,6 +9,8 @@ const multer=require("../middlewares/multerproducts")
 router.get('/listadoProductos',productController.listado);
 router.get('/creacionDeProducto',productController.creacionDeProductos);
 router.post('/crear',multer.any(),productController.crearProducto)
+router.get('/cart',productController.cart)
+router.get('/productDetail',productController.productDetail)
 //eliminar//
 router.get("/delete/:id?",productController.eliminar)
 
