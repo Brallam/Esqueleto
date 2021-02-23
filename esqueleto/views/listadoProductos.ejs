@@ -102,7 +102,7 @@
                 <div class="row">
                 <% productos.forEach(producto=>{%> 
                 <div class="col-3">
-                    <a href="#" class="card card-listado-productos">
+                    <a href="/products/productdetail/<%-producto.id%> " class="card card-listado-productos">
                       <figure class="d-flex justify-content-center align-items-center" style=" height: 400px; margin: 0; overflow: hidden;">
                         <img src="/images/products/<%-producto.image%> " class="card-img-top" alt="...">
                       </figure>
