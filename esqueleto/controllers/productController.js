@@ -60,7 +60,8 @@ const products = {
                 res.render('edicionDeProducto', {
                     productoEdit: id,
                     productos: todos,
-                    user:user
+                    user:user,
+                    users:req.session.user
                 })
             })
             .catch(errores => {

@@ -19,16 +19,16 @@
                 <span style="color:silver; margin-left: 10px;">
                     <i class="bi bi-telephone-fill"></i> Call :0123-456-78
                 </span>
-                <% if (typeof user == "undefined") { %>
+                <% if (typeof users == "undefined") { %>
                     <a href="/users">Login/Register</a>
                 <% }else{ %>
                     
                     <div class="dropdown">
                         <a href="" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                            <%= (user)?user.name:"Invitado" %>
+                            <%= (users)?users.name:"Invitado" %>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
-                          <li><a class="dropdown-item" href="/users/profile/<%-user.id%> " style="font-size: 13px;">Profile</a></li>
+                          <li><a class="dropdown-item" href="/users/profile/<%-users.id%> " style="font-size: 13px;">Profile</a></li>
                           <li><a class="dropdown-item" href="/products/creacionDeProducto" style="font-size: 13px;">Administrar</a></li>
                           <li><a class="dropdown-item" href="/users/close" style="font-size: 13px;">Log out</a></li>
                         </ul>
